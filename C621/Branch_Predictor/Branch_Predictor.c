@@ -3,13 +3,15 @@
 const unsigned instShiftAmt = 2; // Number of bits to shift a PC by
 
 // You can play around with these settings.
-const unsigned localPredictorSize = 2048;
+const unsigned localPredictorSize = 16384;
 const unsigned localCounterBits = 2;
 const unsigned localHistoryTableSize = 2048; 
-const unsigned globalPredictorSize = 8192 ;
+const unsigned globalPredictorSize = 8192;
 const unsigned globalCounterBits = 2;
 const unsigned choicePredictorSize = 8192; // Keep this the same as globalPredictorSize.
 const unsigned choiceCounterBits = 2;
+const unsigned gsharePredictorSize = 8192;
+const unsigned gshareCounterBits = 2;
 
 Branch_Predictor *initBranchPredictor()
 {
@@ -94,6 +96,28 @@ Branch_Predictor *initBranchPredictor()
 
     // We assume choice predictor size is always equal to global predictor size.
     branch_predictor->history_register_mask = choicePredictorSize - 1;
+    #endif
+
+    #ifdef GSHARE
+    assert(checkPowerofTwo(gsharePredictorSize));
+
+    branch_predictor->gshare_predictor_size = gsharePredictorSize;
+
+    // Initialize global counters
+    branch_predictor->gshare_counters = 
+        (Sat_Counter *)malloc(globalPredictorSize * sizeof(Sat_Counter));
+
+    for (i = 0; i < globalPredictorSize; i++)
+    {
+        initSatCounter(&(branch_predictor->gshare_counters[i]), gshareCounterBits);
+    }
+
+    branch_predictor->gshare_history_mask = gsharePredictorSize - 1;
+
+    // global history register
+    branch_predictor->global_history = 0;
+
+    branch_predictor->history_register_mask = sharePredictorSize - 1;
     #endif
 
     return branch_predictor;

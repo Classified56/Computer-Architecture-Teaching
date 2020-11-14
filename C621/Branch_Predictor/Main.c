@@ -47,8 +47,20 @@ int main(int argc, const char *argv[])
         ++num_of_instructions;
     }
 
+    #ifdef TWO_BIT_LOCAL
+    printf("\nTWO_BIT_LOCAL: %s\n", argv[1]);
+    printf("localPredictorSize: %d | ", localPredictorSize);
+    printf("localCounterBits: %d\n", localCounterBits);
+    #endif
+    #ifdef TOURNAMENT
+    printf("\nTOURNAMENT: %s\n", argv[1]);
+    printf("localHistoryTableSize: %d | ", localHistoryTableSize);
+    rintf("globalPredictorSize: %d | ", globalPredictorSize);
+    printf("choicePredictorSize: %d\n", choicePredictorSize);
+    #endif
+
 //    printf("Number of instructions: %"PRIu64"\n", num_of_instructions);
-//    printf("Number of branches: %"PRIu64"\n", num_of_branches);
+    printf("Number of branches: %"PRIu64"\n", num_of_branches);
     printf("Number of correct predictions: %"PRIu64"\n", num_of_correct_predictions);
     printf("Number of incorrect predictions: %"PRIu64"\n", num_of_incorrect_predictions);
 

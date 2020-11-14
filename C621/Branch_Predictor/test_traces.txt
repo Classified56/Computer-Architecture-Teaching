@@ -1,0 +1,104 @@
+TWO_BIT_LOCAL: CPU_traces/531.deepsjeng_r_branches.cpu_trace
+localPredictorSize: 2048 | localCounterBits: 2
+Number of branches: 204719966
+Number of correct predictions: 175794247
+Number of incorrect predictions: 28925719
+Predictor Correctness: 85.870590%
+
+TWO_BIT_LOCAL: CPU_traces/541.leela_r_branches.cpu_trace
+localPredictorSize: 2048 | localCounterBits: 2
+Number of branches: 216132773
+Number of correct predictions: 178713549
+Number of incorrect predictions: 37419224
+Predictor Correctness: 82.686928%
+
+TWO_BIT_LOCAL: CPU_traces/548.exchange2_r_branches.cpu_trace
+localPredictorSize: 2048 | localCounterBits: 2
+Number of branches: 353851200
+Number of correct predictions: 292073706
+Number of incorrect predictions: 61777494
+Predictor Correctness: 82.541389%
+
+TWO_BIT_LOCAL: CPU_traces/531.deepsjeng_r_branches.cpu_trace
+localPredictorSize: 2048 | localCounterBits: 1
+Number of branches: 204719966
+Number of correct predictions: 168274768
+Number of incorrect predictions: 36445198
+Predictor Correctness: 82.197533%
+
+TWO_BIT_LOCAL: CPU_traces/541.leela_r_branches.cpu_trace
+localPredictorSize: 2048 | localCounterBits: 1
+Number of branches: 216132773
+Number of correct predictions: 168602556
+Number of incorrect predictions: 47530217
+Predictor Correctness: 78.008789%
+
+TWO_BIT_LOCAL: CPU_traces/548.exchange2_r_branches.cpu_trace
+localPredictorSize: 2048 | localCounterBits: 1
+Number of branches: 353851200
+Number of correct predictions: 255602221
+Number of incorrect predictions: 98248979
+Predictor Correctness: 72.234383%
+
+TWO_BIT_LOCAL: CPU_traces/531.deepsjeng_r_branches.cpu_trace
+localPredictorSize: 4096 | localCounterBits: 2
+Number of branches: 204719966
+Number of correct predictions: 177385518
+Number of incorrect predictions: 27334448
+Predictor Correctness: 86.647888%
+
+TWO_BIT_LOCAL: CPU_traces/541.leela_r_branches.cpu_trace
+localPredictorSize: 4096 | localCounterBits: 2
+Number of branches: 216132773
+Number of correct predictions: 178989861
+Number of incorrect predictions: 37142912
+Predictor Correctness: 82.814774%
+
+TWO_BIT_LOCAL: CPU_traces/548.exchange2_r_branches.cpu_trace
+localPredictorSize: 4096 | localCounterBits: 2
+Number of branches: 353851200
+Number of correct predictions: 292146797
+Number of incorrect predictions: 61704403
+Predictor Correctness: 82.562042%
+
+TWO_BIT_LOCAL: CPU_traces/531.deepsjeng_r_branches.cpu_trace
+localPredictorSize: 8192 | localCounterBits: 2
+Number of branches: 204719966
+Number of correct predictions: 178085223
+Number of incorrect predictions: 26634743
+Predictor Correctness: 86.989662%
+
+TWO_BIT_LOCAL: CPU_traces/541.leela_r_branches.cpu_trace
+localPredictorSize: 8192 | localCounterBits: 2
+Number of branches: 216132773
+Number of correct predictions: 179391515
+Number of incorrect predictions: 36741258
+Predictor Correctness: 83.000610%
+
+TWO_BIT_LOCAL: CPU_traces/548.exchange2_r_branches.cpu_trace
+localPredictorSize: 8192 | localCounterBits: 2
+Number of branches: 353851200
+Number of correct predictions: 292178159
+Number of incorrect predictions: 61673041
+Predictor Correctness: 82.570908%
+
+TWO_BIT_LOCAL: CPU_traces/531.deepsjeng_r_branches.cpu_trace
+localPredictorSize: 16384 | localCounterBits: 2
+Number of branches: 204719966
+Number of correct predictions: 178223608
+Number of incorrect predictions: 26496358
+Predictor Correctness: 87.057266%
+
+TWO_BIT_LOCAL: CPU_traces/541.leela_r_branches.cpu_trace
+localPredictorSize: 16384 | localCounterBits: 2
+Number of branches: 216132773
+Number of correct predictions: 179415029
+Number of incorrect predictions: 36717744
+Predictor Correctness: 83.011482%
+
+TWO_BIT_LOCAL: CPU_traces/548.exchange2_r_branches.cpu_trace
+localPredictorSize: 16384 | localCounterBits: 2
+Number of branches: 353851200
+Number of correct predictions: 292195854
+Number of incorrect predictions: 61655346
+Predictor Correctness: 82.575905%
