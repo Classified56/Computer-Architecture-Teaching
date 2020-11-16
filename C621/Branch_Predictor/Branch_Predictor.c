@@ -3,14 +3,14 @@
 const unsigned instShiftAmt = 2; // Number of bits to shift a PC by
 
 // You can play around with these settings.
-const unsigned localPredictorSize = 16384;
+const unsigned localPredictorSize = 8192;
 const unsigned localCounterBits = 2;
-const unsigned localHistoryTableSize = 2048; 
-const unsigned globalPredictorSize = 8192;
+const unsigned localHistoryTableSize = 16384; 
+const unsigned globalPredictorSize = 65536;
 const unsigned globalCounterBits = 2;
-const unsigned choicePredictorSize = 8192; // Keep this the same as globalPredictorSize.
+const unsigned choicePredictorSize = 65536; // Keep this the same as globalPredictorSize.
 const unsigned choiceCounterBits = 2;
-const unsigned gsharePredictorSize = 8192;
+const unsigned gsharePredictorSize = 8388608; 
 const unsigned gshareCounterBits = 2;
 
 Branch_Predictor *initBranchPredictor()
@@ -105,9 +105,10 @@ Branch_Predictor *initBranchPredictor()
 
     // Initialize global counters
     branch_predictor->gshare_counters = 
-        (Sat_Counter *)malloc(globalPredictorSize * sizeof(Sat_Counter));
+        (Sat_Counter *)malloc(gsharePredictorSize * sizeof(Sat_Counter));
 
-    for (i = 0; i < globalPredictorSize; i++)
+    int i = 0;
+    for ( ; i < gsharePredictorSize; i++)
     {
         initSatCounter(&(branch_predictor->gshare_counters[i]), gshareCounterBits);
     }
@@ -117,7 +118,7 @@ Branch_Predictor *initBranchPredictor()
     // global history register
     branch_predictor->global_history = 0;
 
-    branch_predictor->history_register_mask = sharePredictorSize - 1;
+    branch_predictor->history_register_mask = gsharePredictorSize - 1;
     #endif
 
     return branch_predictor;
@@ -247,6 +248,36 @@ bool predict(Branch_Predictor *branch_predictor, Instruction *instr)
     // exit(0);
     //
     return prediction_correct;
+    #endif
+
+    #ifdef GSHARE
+    // Step one, get prediction
+    unsigned local_index = getIndex(branch_address, 
+                                    branch_predictor->history_register_mask);
+
+    unsigned global_index = branch_predictor->global_history & branch_predictor->history_register_mask;
+
+    unsigned gshare_index = local_index ^ global_index;
+
+    bool gsharePrediction = getPrediction(&(branch_predictor->gshare_counters[gshare_index]));
+
+    // Step two, update counter
+    if (instr->taken)
+    {
+        // printf("Correct: %u -> ", branch_predictor->local_counters[local_index].counter);
+        incrementCounter(&(branch_predictor->gshare_counters[gshare_index]));
+        // printf("%u\n", branch_predictor->local_counters[local_index].counter);
+    }
+    else
+    {
+        // printf("Incorrect: %u -> ", branch_predictor->local_counters[local_index].counter);
+        decrementCounter(&(branch_predictor->gshare_counters[gshare_index]));
+        // printf("%u\n", branch_predictor->local_counters[local_index].counter);
+    }
+
+    branch_predictor->global_history = branch_predictor->global_history << 1 | instr->taken;
+
+    return gsharePrediction == instr->taken;
     #endif
 }
 

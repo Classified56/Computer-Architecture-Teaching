@@ -55,8 +55,13 @@ int main(int argc, const char *argv[])
     #ifdef TOURNAMENT
     printf("\nTOURNAMENT: %s\n", argv[1]);
     printf("localHistoryTableSize: %d | ", localHistoryTableSize);
-    rintf("globalPredictorSize: %d | ", globalPredictorSize);
+    printf("globalPredictorSize: %d | ", globalPredictorSize);
     printf("choicePredictorSize: %d\n", choicePredictorSize);
+    #endif
+    #ifdef GSHARE
+    printf("\nGSHARE: %s\n", argv[1]);
+    printf("gsharePredictorSize: %d | ", gsharePredictorSize);
+    printf("gshareCounterBits: %d\n", gshareCounterBits);
     #endif
 
 //    printf("Number of instructions: %"PRIu64"\n", num_of_instructions);

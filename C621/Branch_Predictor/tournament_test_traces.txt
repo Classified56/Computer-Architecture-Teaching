@@ -1,0 +1,146 @@
+TOURNAMENT: CPU_traces/531.deepsjeng_r_branches.cpu_trace
+localHistoryTableSize: 2048 | globalPredictorSize: 8192 | choicePredictorSize: 8192
+Number of branches: 204719966
+Number of correct predictions: 186733512
+Number of incorrect predictions: 17986454
+Predictor Correctness: 91.214111%
+
+TOURNAMENT: CPU_traces/541.leela_r_branches.cpu_trace
+localHistoryTableSize: 2048 | globalPredictorSize: 8192 | choicePredictorSize: 8192
+Number of branches: 216132773
+Number of correct predictions: 182428083
+Number of incorrect predictions: 33704690
+Predictor Correctness: 84.405563%
+
+TOURNAMENT: CPU_traces/548.exchange2_r_branches.cpu_trace
+localHistoryTableSize: 2048 | globalPredictorSize: 8192 | choicePredictorSize: 8192
+Number of branches: 353851200
+Number of correct predictions: 337742000
+Number of incorrect predictions: 16109200
+Predictor Correctness: 95.447472%
+
+TOURNAMENT: CPU_traces/531.deepsjeng_r_branches.cpu_trace
+localHistoryTableSize: 4096 | globalPredictorSize: 8192 | choicePredictorSize: 8192
+Number of branches: 204719966
+Number of correct predictions: 187322783
+Number of incorrect predictions: 17397183
+Predictor Correctness: 91.501961%
+
+TOURNAMENT: CPU_traces/541.leela_r_branches.cpu_trace
+localHistoryTableSize: 4096 | globalPredictorSize: 8192 | choicePredictorSize: 8192
+Number of branches: 216132773
+Number of correct predictions: 182744423
+Number of incorrect predictions: 33388350
+Predictor Correctness: 84.551926%
+
+TOURNAMENT: CPU_traces/548.exchange2_r_branches.cpu_trace
+localHistoryTableSize: 4096 | globalPredictorSize: 8192 | choicePredictorSize: 8192
+Number of branches: 353851200
+Number of correct predictions: 337826831
+Number of incorrect predictions: 16024369
+Predictor Correctness: 95.471436%
+
+TOURNAMENT: CPU_traces/531.deepsjeng_r_branches.cpu_trace
+localHistoryTableSize: 4096 | globalPredictorSize: 16384 | choicePredictorSize: 16384
+Number of branches: 204719966
+Number of correct predictions: 188849887
+Number of incorrect predictions: 15870079
+Predictor Correctness: 92.247910%
+
+TOURNAMENT: CPU_traces/541.leela_r_branches.cpu_trace
+localHistoryTableSize: 4096 | globalPredictorSize: 16384 | choicePredictorSize: 16384
+Number of branches: 216132773
+Number of correct predictions: 184227759
+Number of incorrect predictions: 31905014
+Predictor Correctness: 85.238235%
+
+TOURNAMENT: CPU_traces/548.exchange2_r_branches.cpu_trace
+localHistoryTableSize: 4096 | globalPredictorSize: 16384 | choicePredictorSize: 16384
+Number of branches: 353851200
+Number of correct predictions: 338578309
+Number of incorrect predictions: 15272891
+Predictor Correctness: 95.683807%
+
+TOURNAMENT: CPU_traces/531.deepsjeng_r_branches.cpu_trace
+localHistoryTableSize: 4096 | globalPredictorSize: 32768 | choicePredictorSize: 32768
+Number of branches: 204719966
+Number of correct predictions: 190201806
+Number of incorrect predictions: 14518160
+Predictor Correctness: 92.908279%
+
+TOURNAMENT: CPU_traces/541.leela_r_branches.cpu_trace
+localHistoryTableSize: 4096 | globalPredictorSize: 32768 | choicePredictorSize: 32768
+Number of branches: 216132773
+Number of correct predictions: 185754641
+Number of incorrect predictions: 30378132
+Predictor Correctness: 85.944687%
+
+TOURNAMENT: CPU_traces/548.exchange2_r_branches.cpu_trace
+localHistoryTableSize: 4096 | globalPredictorSize: 32768 | choicePredictorSize: 32768
+Number of branches: 353851200
+Number of correct predictions: 339437714
+Number of incorrect predictions: 14413486
+Predictor Correctness: 95.926682%
+
+TOURNAMENT: CPU_traces/531.deepsjeng_r_branches.cpu_trace
+localHistoryTableSize: 8192 | globalPredictorSize: 32768 | choicePredictorSize: 32768
+Number of branches: 204719966
+Number of correct predictions: 190370381
+Number of incorrect predictions: 14349585
+Predictor Correctness: 92.990631%
+
+TOURNAMENT: CPU_traces/541.leela_r_branches.cpu_trace
+localHistoryTableSize: 8192 | globalPredictorSize: 32768 | choicePredictorSize: 32768
+Number of branches: 216132773
+Number of correct predictions: 185885705
+Number of incorrect predictions: 30247068
+Predictor Correctness: 86.005333%
+
+TOURNAMENT: CPU_traces/548.exchange2_r_branches.cpu_trace
+localHistoryTableSize: 8192 | globalPredictorSize: 32768 | choicePredictorSize: 32768
+Number of branches: 353851200
+Number of correct predictions: 339477385
+Number of incorrect predictions: 14373815
+Predictor Correctness: 95.937889%
+
+TOURNAMENT: CPU_traces/531.deepsjeng_r_branches.cpu_trace
+localHistoryTableSize: 8192 | globalPredictorSize: 65536 | choicePredictorSize: 65536
+Number of branches: 204719966
+Number of correct predictions: 191430929
+Number of incorrect predictions: 13289037
+Predictor Correctness: 93.508675%
+
+TOURNAMENT: CPU_traces/541.leela_r_branches.cpu_trace
+localHistoryTableSize: 8192 | globalPredictorSize: 65536 | choicePredictorSize: 65536
+Number of branches: 216132773
+Number of correct predictions: 187351786
+Number of incorrect predictions: 28780987
+Predictor Correctness: 86.683662%
+
+TOURNAMENT: CPU_traces/548.exchange2_r_branches.cpu_trace
+localHistoryTableSize: 8192 | globalPredictorSize: 65536 | choicePredictorSize: 65536
+Number of branches: 353851200
+Number of correct predictions: 340156314
+Number of incorrect predictions: 13694886
+Predictor Correctness: 96.129761%
+
+TOURNAMENT: CPU_traces/531.deepsjeng_r_branches.cpu_trace
+localHistoryTableSize: 16384 | globalPredictorSize: 65536 | choicePredictorSize: 65536
+Number of branches: 204719966
+Number of correct predictions: 191526216
+Number of incorrect predictions: 13193750
+Predictor Correctness: 93.555222%
+
+TOURNAMENT: CPU_traces/541.leela_r_branches.cpu_trace
+localHistoryTableSize: 16384 | globalPredictorSize: 65536 | choicePredictorSize: 65536
+Number of branches: 216132773
+Number of correct predictions: 187363907
+Number of incorrect predictions: 28768866
+Predictor Correctness: 86.689262%
+
+TOURNAMENT: CPU_traces/548.exchange2_r_branches.cpu_trace
+localHistoryTableSize: 16384 | globalPredictorSize: 65536 | choicePredictorSize: 65536
+Number of branches: 353851200
+Number of correct predictions: 340191697
+Number of incorrect predictions: 13659503
+Predictor Correctness: 96.139763%

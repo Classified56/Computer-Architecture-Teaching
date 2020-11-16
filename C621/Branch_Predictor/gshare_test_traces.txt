@@ -1,0 +1,146 @@
+GSHARE: CPU_traces/531.deepsjeng_r_branches.cpu_trace
+gsharePredictorSize: 2048 | gshareCounterBits: 1
+Number of branches: 204719966
+Number of correct predictions: 168274768
+Number of incorrect predictions: 36445198
+Predictor Correctness: 82.197533%
+
+GSHARE: CPU_traces/541.leela_r_branches.cpu_trace
+gsharePredictorSize: 2048 | gshareCounterBits: 1
+Number of branches: 216132773
+Number of correct predictions: 168602556
+Number of incorrect predictions: 47530217
+Predictor Correctness: 78.008789%
+
+GSHARE: CPU_traces/548.exchange2_r_branches.cpu_trace
+gsharePredictorSize: 2048 | gshareCounterBits: 1
+Number of branches: 353851200
+Number of correct predictions: 255602221
+Number of incorrect predictions: 98248979
+Predictor Correctness: 72.234383%
+
+GSHARE: CPU_traces/531.deepsjeng_r_branches.cpu_trace
+gsharePredictorSize: 2048 | gshareCounterBits: 2
+Number of branches: 204719966
+Number of correct predictions: 175794247
+Number of incorrect predictions: 28925719
+Predictor Correctness: 85.870590%
+
+GSHARE: CPU_traces/541.leela_r_branches.cpu_trace
+gsharePredictorSize: 2048 | gshareCounterBits: 2
+Number of branches: 216132773
+Number of correct predictions: 178713549
+Number of incorrect predictions: 37419224
+Predictor Correctness: 82.686928%
+
+GSHARE: CPU_traces/548.exchange2_r_branches.cpu_trace
+gsharePredictorSize: 2048 | gshareCounterBits: 2
+Number of branches: 353851200
+Number of correct predictions: 292073706
+Number of incorrect predictions: 61777494
+Predictor Correctness: 82.541389%
+
+GSHARE: CPU_traces/531.deepsjeng_r_branches.cpu_trace
+gsharePredictorSize: 4096 | gshareCounterBits: 2
+Number of branches: 204719966
+Number of correct predictions: 177385518
+Number of incorrect predictions: 27334448
+Predictor Correctness: 86.647888%
+
+GSHARE: CPU_traces/541.leela_r_branches.cpu_trace
+gsharePredictorSize: 4096 | gshareCounterBits: 2
+Number of branches: 216132773
+Number of correct predictions: 178989861
+Number of incorrect predictions: 37142912
+Predictor Correctness: 82.814774%
+
+GSHARE: CPU_traces/548.exchange2_r_branches.cpu_trace
+gsharePredictorSize: 4096 | gshareCounterBits: 2
+Number of branches: 353851200
+Number of correct predictions: 292146797
+Number of incorrect predictions: 61704403
+Predictor Correctness: 82.562042%
+
+GSHARE: CPU_traces/531.deepsjeng_r_branches.cpu_trace
+gsharePredictorSize: 8192 | gshareCounterBits: 2
+Number of branches: 204719966
+Number of correct predictions: 178085223
+Number of incorrect predictions: 26634743
+Predictor Correctness: 86.989662%
+
+GSHARE: CPU_traces/541.leela_r_branches.cpu_trace
+gsharePredictorSize: 8192 | gshareCounterBits: 2
+Number of branches: 216132773
+Number of correct predictions: 179391515
+Number of incorrect predictions: 36741258
+Predictor Correctness: 83.000610%
+
+GSHARE: CPU_traces/548.exchange2_r_branches.cpu_trace
+gsharePredictorSize: 8192 | gshareCounterBits: 2
+Number of branches: 353851200
+Number of correct predictions: 292178159
+Number of incorrect predictions: 61673041
+Predictor Correctness: 82.570908%
+
+GSHARE: CPU_traces/531.deepsjeng_r_branches.cpu_trace
+gsharePredictorSize: 16384 | gshareCounterBits: 2
+Number of branches: 204719966
+Number of correct predictions: 178223608
+Number of incorrect predictions: 26496358
+Predictor Correctness: 87.057266%
+
+GSHARE: CPU_traces/541.leela_r_branches.cpu_trace
+gsharePredictorSize: 16384 | gshareCounterBits: 2
+Number of branches: 216132773
+Number of correct predictions: 179415029
+Number of incorrect predictions: 36717744
+Predictor Correctness: 83.011482%
+
+GSHARE: CPU_traces/548.exchange2_r_branches.cpu_trace
+gsharePredictorSize: 16384 | gshareCounterBits: 2
+Number of branches: 353851200
+Number of correct predictions: 292195854
+Number of incorrect predictions: 61655346
+Predictor Correctness: 82.575905%
+
+GSHARE: CPU_traces/531.deepsjeng_r_branches.cpu_trace
+gsharePredictorSize: 32768 | gshareCounterBits: 2
+Number of branches: 204719966
+Number of correct predictions: 178223992
+Number of incorrect predictions: 26495974
+Predictor Correctness: 87.057457%
+
+GSHARE: CPU_traces/541.leela_r_branches.cpu_trace
+gsharePredictorSize: 32768 | gsharePredictorSizeshareCounterBits: 2
+Number of branches: 216132773
+Number of correct predictions: 179417105
+Number of incorrect predictions: 36715668
+Predictor Correctness: 83.012451%
+
+GSHARE: CPU_traces/548.exchange2_r_branches.cpu_trace
+gsharePredictorSize: 32768 | gshareCounterBits: 2
+Number of branches: 353851200
+Number of correct predictions: 292198756
+Number of incorrect predictions: 61652444
+Predictor Correctness: 82.576729%
+
+GSHARE: CPU_traces/531.deepsjeng_r_branches.cpu_trace
+gsharePredictorSize: 65536 | gshareCounterBits: 2
+Number of branches: 204719966
+Number of correct predictions: 178224001
+Number of incorrect predictions: 26495965
+Predictor Correctness: 87.057457%
+
+GSHARE: CPU_traces/541.leela_r_branches.cpu_trace
+gsharePredictorSize: 65536 | gshareCounterBits: 2
+Number of branches: 216132773
+Number of correct predictions: 179417270
+Number of incorrect predictions: 36715503
+Predictor Correctness: 83.012520%
+
+GSHARE: CPU_traces/548.exchange2_r_branches.cpu_trace
+gsharePredictorSize: 65536 | gshareCounterBits: 2
+Number of branches: 353851200
+Number of correct predictions: 292200308
+Number of incorrect predictions: 61650892
+Predictor Correctness: 82.577171%
