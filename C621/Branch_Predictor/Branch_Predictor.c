@@ -5,13 +5,17 @@ const unsigned instShiftAmt = 2; // Number of bits to shift a PC by
 // You can play around with these settings.
 const unsigned localPredictorSize = 8192;
 const unsigned localCounterBits = 2;
-const unsigned localHistoryTableSize = 16384; 
+const unsigned localHistoryTableSize = 16384;
 const unsigned globalPredictorSize = 65536;
 const unsigned globalCounterBits = 2;
 const unsigned choicePredictorSize = 65536; // Keep this the same as globalPredictorSize.
 const unsigned choiceCounterBits = 2;
 const unsigned gsharePredictorSize = 8388608; 
 const unsigned gshareCounterBits = 2;
+const unsigned perceptronTableSize = 65536;
+const unsigned perceptronHistoryLength = 62;
+const unsigned perceptronWeightBits = 9;
+
 
 Branch_Predictor *initBranchPredictor()
 {
@@ -119,6 +123,18 @@ Branch_Predictor *initBranchPredictor()
     branch_predictor->global_history = 0;
 
     branch_predictor->history_register_mask = gsharePredictorSize - 1;
+    #endif
+
+    #ifdef PERCEPTRON
+    assert(checkPowerofTwo(perceptronTableSize));
+
+    branch_predictor->perceptron_table_size = perceptronTableSize;
+    branch_predictor->perceptron_index_mask = perceptronTableSize - 1;
+    branch_predictor->percep_table = initPerceptronTable(perceptronTableSize, perceptronHistoryLength, perceptronWeightBits);
+
+    // global history register
+    branch_predictor->global_history = 0;
+    branch_predictor->history_register_mask = (1 << perceptronHistoryLength) - 1;
     #endif
 
     return branch_predictor;
@@ -252,8 +268,7 @@ bool predict(Branch_Predictor *branch_predictor, Instruction *instr)
 
     #ifdef GSHARE
     // Step one, get prediction
-    unsigned local_index = getIndex(branch_address, 
-                                    branch_predictor->history_register_mask);
+    unsigned local_index = getIndex(branch_address, branch_predictor->history_register_mask);
 
     unsigned global_index = branch_predictor->global_history & branch_predictor->history_register_mask;
 
@@ -278,6 +293,19 @@ bool predict(Branch_Predictor *branch_predictor, Instruction *instr)
     branch_predictor->global_history = branch_predictor->global_history << 1 | instr->taken;
 
     return gsharePrediction == instr->taken;
+    #endif
+
+    #ifdef PERCEPTRON
+    unsigned local_index = getIndex(branch_address, branch_predictor->history_register_mask);
+    unsigned hashed_index = (local_index ^ branch_predictor->global_history) & branch_predictor->perceptron_index_mask;
+
+    bool perceptronPrediction = getPercepPrediction(&(branch_predictor->percep_table[hashed_index]), branch_predictor->global_history);
+
+    trainPerceptron(&(branch_predictor->percep_table[hashed_index]), instr->taken, branch_predictor->global_history);
+
+    branch_predictor->global_history = branch_predictor->global_history << 1 | instr->taken;
+
+    return perceptronPrediction == instr->taken;
     #endif
 }
 
@@ -313,5 +341,62 @@ int checkPowerofTwo(unsigned x)
         }
         x /= 2;
     }
-    return 1;
+    return 1;  
+}
+
+Perceptron* initPerceptronTable(unsigned perceptron_table_size, unsigned history_length, unsigned perceptron_bits) 
+{
+    Perceptron *head = (Perceptron*)malloc(perceptron_table_size * sizeof(Perceptron));
+
+    int i = 0, j;
+    for( ; i < perceptron_table_size; i++)
+    {
+        head[i].history_length = history_length;
+        head[i].weight_table = (Percep_Weight*)malloc(history_length * sizeof(Percep_Weight));
+        for (j = 0; j < history_length; j++) 
+        {
+            head[i].weight_table[j].weight_bits = perceptron_bits;
+            head[i].weight_table[j].weight = 0;
+            head[i].weight_table[j].max_val = 1.93 * history_length + 14; //(1 << (perceptron_bits - 1)) - 1;
+            head[i].weight_table[j].min_val = -1.93 * history_length - 14; //(1 << (perceptron_bits - 1)) * -1;
+        }
+    }
+
+    return head;
+}
+
+void trainPerceptron(Perceptron* perceptron, int t, uint64_t global_history) 
+{
+    for(int i = 0; i < perceptron->history_length; i++)
+    {
+        if(t == ((global_history >> i) & 1)) 
+        {
+            if(perceptron->weight_table[i].weight < perceptron->weight_table[i].max_val) 
+            {
+                perceptron->weight_table[i].weight += 1;
+            }
+        }
+        else 
+        {
+            if(perceptron->weight_table[i].weight > perceptron->weight_table[i].min_val)
+            {
+                perceptron->weight_table[i].weight -= 1;
+            }
+        }
+    }
+}
+
+bool getPercepPrediction(Perceptron* perceptron, uint64_t global_history) 
+{
+    int output = 1, xi;
+    //printf("Global: %ld\n", global_history);
+    for(int i = 0; i < perceptron->history_length; i++)
+    {
+        //printf("i: %d\n", i);
+        xi = (global_history >> i) & 1 ? 1 : -1;
+        //printf("Xi: %d\n", xi);
+        //printf("weight: %d\n\n", perceptron->weight_table[i].weight);
+        output += perceptron->weight_table[i].weight * xi;
+    }
+    return output >= 0;
 }

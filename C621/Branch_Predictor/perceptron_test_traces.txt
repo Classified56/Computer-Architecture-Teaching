@@ -1,0 +1,146 @@
+PERCEPTRON: CPU_traces/531.deepsjeng_r_branches.cpu_trace
+perceptronTableSize: 2048 | perceptronHistoryLength: 22 | perceptronWeightBits: 9
+Number of branches: 204719966
+Number of correct predictions: 175588413
+Number of incorrect predictions: 29131553
+Predictor Correctness: 85.770050%
+
+PERCEPTRON: CPU_traces/541.leela_r_branches.cpu_trace
+perceptronTableSize: 2048 | perceptronHistoryLength: 22 | perceptronWeightBits: 9
+Number of branches: 216132773
+Number of correct predictions: 173261523
+Number of incorrect predictions: 42871250
+Predictor Correctness: 80.164391%
+
+PERCEPTRON: CPU_traces/548.exchange2_r_branches.cpu_trace
+perceptronTableSize: 2048 | perceptronHistoryLength: 22 | perceptronWeightBits: 9
+Number of branches: 353851200
+Number of correct predictions: 321805257
+Number of incorrect predictions: 32045943
+Predictor Correctness: 90.943665%
+
+PERCEPTRON: CPU_traces/531.deepsjeng_r_branches.cpu_trace
+perceptronTableSize: 4096 | perceptronHistoryLength: 28 | perceptronWeightBits: 9
+Number of branches: 204719966
+Number of correct predictions: 178780686
+Number of incorrect predictions: 25939280
+Predictor Correctness: 87.329384%
+
+PERCEPTRON: CPU_traces/541.leela_r_branches.cpu_trace
+perceptronTableSize: 4096 | perceptronHistoryLength: 28 | perceptronWeightBits: 9
+Number of branches: 216132773
+Number of correct predictions: 177205543
+Number of incorrect predictions: 38927230
+Predictor Correctness: 81.989204%
+
+PERCEPTRON: CPU_traces/548.exchange2_r_branches.cpu_trace
+perceptronTableSize: 4096 | perceptronHistoryLength: 28 | perceptronWeightBits: 9
+Number of branches: 353851200
+Number of correct predictions: 326100768
+Number of incorrect predictions: 27750432
+Predictor Correctness: 92.157593%
+
+PERCEPTRON: CPU_traces/531.deepsjeng_r_branches.cpu_trace
+perceptronTableSize: 8192 | perceptronHistoryLength: 34 | perceptronWeightBits: 9
+Number of branches: 204719966
+Number of correct predictions: 173693379
+Number of incorrect predictions: 31026587
+Predictor Correctness: 84.844376%
+
+PERCEPTRON: CPU_traces/541.leela_r_branches.cpu_trace
+perceptronTableSize: 8192 | perceptronHistoryLength: 34 | perceptronWeightBits: 9
+Number of branches: 216132773
+Number of correct predictions: 172851139
+Number of incorrect predictions: 43281634
+Predictor Correctness: 79.974518%
+
+PERCEPTRON: CPU_traces/548.exchange2_r_branches.cpu_trace
+perceptronTableSize: 8192 | perceptronHistoryLength: 34 | perceptronWeightBits: 9
+Number of branches: 353851200
+Number of correct predictions: 314947003
+Number of incorrect predictions: 38904197
+Predictor Correctness: 89.005493%
+
+PERCEPTRON: CPU_traces/531.deepsjeng_r_branches.cpu_trace
+perceptronTableSize: 16384 | perceptronHistoryLength: 36 | perceptronWeightBits: 9
+Number of branches: 204719966
+Number of correct predictions: 178873436
+Number of incorrect predictions: 25846530
+Predictor Correctness: 87.374695%
+
+PERCEPTRON: CPU_traces/541.leela_r_branches.cpu_trace
+perceptronTableSize: 16384 | perceptronHistoryLength: 36 | perceptronWeightBits: 9
+Number of branches: 216132773
+Number of correct predictions: 177439950
+Number of incorrect predictions: 38692823
+Predictor Correctness: 82.097664%
+
+PERCEPTRON: CPU_traces/548.exchange2_r_branches.cpu_trace
+perceptronTableSize: 16384 | perceptronHistoryLength: 36 | perceptronWeightBits: 9
+Number of branches: 353851200
+Number of correct predictions: 321286136
+Number of incorrect predictions: 32565064
+Predictor Correctness: 90.796967%
+
+PERCEPTRON: CPU_traces/531.deepsjeng_r_branches.cpu_trace
+perceptronTableSize: 32768 | perceptronHistoryLength: 59 | perceptronWeightBits: 9
+Number of branches: 204719966
+Number of correct predictions: 185859927
+Number of incorrect predictions: 18860039
+Predictor Correctness: 90.787392%
+
+PERCEPTRON: CPU_traces/541.leela_r_branches.cpu_trace
+perceptronTableSize: 32768 | perceptronHistoryLength: 59 | perceptronWeightBits: 9
+Number of branches: 216132773
+Number of correct predictions: 186730116
+Number of incorrect predictions: 29402657
+Predictor Correctness: 86.396019%
+
+PERCEPTRON: CPU_traces/548.exchange2_r_branches.cpu_trace
+perceptronTableSize: 32768 | perceptronHistoryLength: 59 | perceptronWeightBits: 9
+Number of branches: 353851200
+Number of correct predictions: 334483275
+Number of incorrect predictions: 19367925
+Predictor Correctness: 94.526527%
+
+PERCEPTRON: CPU_traces/531.deepsjeng_r_branches.cpu_trace
+perceptronTableSize: 65536 | perceptronHistoryLength: 59 | perceptronWeightBits: 9
+Number of branches: 204719966
+Number of correct predictions: 187657156
+Number of incorrect predictions: 17062810
+Predictor Correctness: 91.665291%
+
+PERCEPTRON: CPU_traces/541.leela_r_branches.cpu_trace
+perceptronTableSize: 65536 | perceptronHistoryLength: 59 | perceptronWeightBits: 9
+Number of branches: 216132773
+Number of correct predictions: 188845575
+Number of incorrect predictions: 27287198
+Predictor Correctness: 87.374794%
+
+PERCEPTRON: CPU_traces/548.exchange2_r_branches.cpu_trace
+perceptronTableSize: 65536 | perceptronHistoryLength: 59 | perceptronWeightBits: 9
+Number of branches: 353851200
+Number of correct predictions: 335875824
+Number of incorrect predictions: 17975376
+Predictor Correctness: 94.920082%
+
+PERCEPTRON: CPU_traces/531.deepsjeng_r_branches.cpu_trace
+perceptronTableSize: 65536 | perceptronHistoryLength: 62 | perceptronWeightBits: 9
+Number of branches: 204719966
+Number of correct predictions: 187529631
+Number of incorrect predictions: 17190335
+Predictor Correctness: 91.602997%
+
+PERCEPTRON: CPU_traces/541.leela_r_branches.cpu_trace
+perceptronTableSize: 65536 | perceptronHistoryLength: 62 | perceptronWeightBits: 9
+Number of branches: 216132773
+Number of correct predictions: 188899778
+Number of incorrect predictions: 27232995
+Predictor Correctness: 87.399879%
+
+PERCEPTRON: CPU_traces/548.exchange2_r_branches.cpu_trace
+perceptronTableSize: 65536 | perceptronHistoryLength: 62 | perceptronWeightBits: 9
+Number of branches: 353851200
+Number of correct predictions: 335972953
+Number of incorrect predictions: 17878247
+Predictor Correctness: 94.947525%

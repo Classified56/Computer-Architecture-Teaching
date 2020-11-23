@@ -9,7 +9,7 @@ extern bool accessBlock(Cache *cache, Request *req, uint64_t access_time);
 extern bool insertBlock(Cache *cache, Request *req, uint64_t access_time, uint64_t *wb_addr);
 
 int main(int argc, const char *argv[])
-{	
+{   
     if (argc != 2)
     {
         printf("Usage: %s %s\n", argv[0], "<mem-file>");
@@ -57,5 +57,15 @@ int main(int argc, const char *argv[])
     }
 
     double hit_rate = (double)hits / ((double)hits + (double)misses);
+
+    #ifdef LRU
+    printf("\nLRU: %s\n", argv[1]);
+    #endif
+    #ifdef LFU
+    printf("\nLFU: %s\n", argv[1]);
+    #endif
+
+    printf("Cache_Size: %d | ", cache_size);
+    printf("Assoc: %d\n", assoc);
     printf("Hit rate: %lf%%\n", hit_rate * 100);
 }

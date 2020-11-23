@@ -12,7 +12,8 @@
 // Predictor type
 //#define TWO_BIT_LOCAL
 //#define TOURNAMENT
-#define GSHARE
+//#define GSHARE
+#define PERCEPTRON
 
 extern const unsigned localPredictorSize;
 extern const unsigned localCounterBits;
@@ -23,6 +24,9 @@ extern const unsigned choicePredictorSize;
 extern const unsigned choiceCounterBits;
 extern const unsigned gsharePredictorSize;
 extern const unsigned gshareCounterBits;
+extern const unsigned perceptronTableSize;
+extern const unsigned perceptronHistoryLength;
+extern const unsigned perceptronWeightBits;
 
 // saturating counter
 typedef struct Sat_Counter
@@ -31,6 +35,20 @@ typedef struct Sat_Counter
     uint8_t max_val;
     uint8_t counter;
 }Sat_Counter;
+
+typedef struct Percep_Weight
+{
+    unsigned weight_bits;
+    int weight;
+    int max_val;
+    int min_val;
+}Percep_Weight;
+
+typedef struct Perceptron
+{
+    unsigned history_length;
+    Percep_Weight* weight_table;
+}Perceptron;
 
 typedef struct Branch_Predictor
 {
@@ -71,6 +89,15 @@ typedef struct Branch_Predictor
     unsigned history_register_mask;
     #endif
 
+    #ifdef PERCEPTRON
+    unsigned perceptron_table_size;
+    unsigned perceptron_index_mask;
+    Perceptron *percep_table;
+
+    uint64_t global_history;
+    unsigned history_register_mask;
+    #endif
+
 }Branch_Predictor;
 
 // Initialization function
@@ -89,5 +116,10 @@ bool getPrediction(Sat_Counter *sat_counter);
 
 // Utility
 int checkPowerofTwo(unsigned x);
+
+// Perceptron Functions
+Perceptron* initPerceptronTable(unsigned perceptron_table_size, unsigned history_length, unsigned perceptron_bits);
+void trainPerceptron(Perceptron* perceptron, int t, uint64_t global_history);
+bool getPercepPrediction(Perceptron* perceptron, uint64_t global_history);
 
 #endif

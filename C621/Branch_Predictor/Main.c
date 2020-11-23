@@ -63,6 +63,12 @@ int main(int argc, const char *argv[])
     printf("gsharePredictorSize: %d | ", gsharePredictorSize);
     printf("gshareCounterBits: %d\n", gshareCounterBits);
     #endif
+    #ifdef PERCEPTRON
+    printf("\nPERCEPTRON: %s\n", argv[1]);
+    printf("perceptronTableSize: %d | ", perceptronTableSize);
+    printf("perceptronHistoryLength: %d | ", perceptronHistoryLength);
+    printf("perceptronWeightBits: %d\n", perceptronWeightBits);
+    #endif
 
 //    printf("Number of instructions: %"PRIu64"\n", num_of_instructions);
     printf("Number of branches: %"PRIu64"\n", num_of_branches);
