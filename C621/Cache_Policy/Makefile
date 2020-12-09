@@ -8,6 +8,9 @@ all: $(TARGET)
 $(TARGET): $(SOURCE)
 	$(CC) -o $(TARGET) $(SOURCE) $(LINK)
 
+debug: $(SOURCE)
+	$(CC) -g -o debug $(SOURCE) $(LINK)
+
 test_traces.txt: $(TARGET)
 	./$(TARGET) mem_trace/531.deepsjeng_r_llc.mem_trace >> test_traces.txt
 	./$(TARGET) mem_trace/541.leela_r_llc.mem_trace >> test_traces.txt

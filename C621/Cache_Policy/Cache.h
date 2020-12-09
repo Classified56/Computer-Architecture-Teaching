@@ -13,15 +13,24 @@
 #include "Request.h"
 
 //#define LRU
-#define LFU
+//#define LFU
+#define ARC
 
 extern const unsigned cache_size;
 extern const unsigned assoc;
+
+typedef struct Node{
+    uint64_t addr;
+    struct Node *next;
+}Node;
 
 /* Cache */
 typedef struct Set
 {
     Cache_Block **ways; // Block ways within a set
+    Node *L1;
+    Node *L2;
+    uint64_t p;
 }Set;
 
 typedef struct Cache
@@ -55,5 +64,13 @@ Cache_Block *findBlock(Cache *cache, uint64_t addr);
 // Replacement Policies
 bool lru(Cache *cache, uint64_t addr, Cache_Block **victim_blk, uint64_t *wb_addr);
 bool lfu(Cache *cache, uint64_t addr, Cache_Block **victim_blk, uint64_t *wb_addr);
+bool arc(Cache *cache, uint64_t addr, Cache_Block **victim_blk, uint64_t *wb_addr);
+
+int lengthNode(Node *head);
+bool findNode(Node *head, uint64_t block);
+void insertFirstNode(Node **head, uint64_t block);
+Node* deleteLastNode(Node **head);
+Node* deleteNode(Node **head, uint64_t block);
+void insertNodeOrTop(Node **head, uint64_t block);
 
 #endif

@@ -64,6 +64,9 @@ int main(int argc, const char *argv[])
     #ifdef LFU
     printf("\nLFU: %s\n", argv[1]);
     #endif
+    #ifdef ARC
+    printf("\nARC: %s\n", argv[1]);
+    #endif
 
     printf("Cache_Size: %d | ", cache_size);
     printf("Assoc: %d\n", assoc);

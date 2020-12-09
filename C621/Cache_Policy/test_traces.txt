@@ -1,0 +1,191 @@
+ARC: mem_trace/531.deepsjeng_r_llc.mem_trace
+Cache_Size: 128 | Assoc: 4
+Hit rate: 77.054361%
+
+ARC: mem_trace/541.leela_r_llc.mem_trace
+Cache_Size: 128 | Assoc: 4
+Hit rate: 43.600741%
+
+ARC: mem_trace/548.exchange2_r_llc.mem_trace
+Cache_Size: 128 | Assoc: 4
+Hit rate: 99.927129%
+
+ARC: mem_trace/531.deepsjeng_r_llc.mem_trace
+Cache_Size: 128 | Assoc: 4
+Hit rate: 77.051160%
+
+ARC: mem_trace/541.leela_r_llc.mem_trace
+Cache_Size: 128 | Assoc: 4
+Hit rate: 43.602059%
+
+ARC: mem_trace/548.exchange2_r_llc.mem_trace
+Cache_Size: 128 | Assoc: 4
+Hit rate: 99.928244%
+
+ARC: mem_trace/531.deepsjeng_r_llc.mem_trace
+Cache_Size: 256 | Assoc: 4
+Hit rate: 88.976813%
+
+ARC: mem_trace/541.leela_r_llc.mem_trace
+Cache_Size: 256 | Assoc: 4
+Hit rate: 71.158670%
+
+ARC: mem_trace/548.exchange2_r_llc.mem_trace
+Cache_Size: 256 | Assoc: 4
+Hit rate: 99.984771%
+
+ARC: mem_trace/531.deepsjeng_r_llc.mem_trace
+Cache_Size: 512 | Assoc: 4
+Hit rate: 93.838543%
+
+ARC: mem_trace/541.leela_r_llc.mem_trace
+Cache_Size: 512 | Assoc: 4
+Hit rate: 92.482578%
+
+ARC: mem_trace/548.exchange2_r_llc.mem_trace
+Cache_Size: 512 | Assoc: 4
+Hit rate: 99.985094%
+
+ARC: mem_trace/531.deepsjeng_r_llc.mem_trace
+Cache_Size: 1024 | Assoc: 4
+Hit rate: 95.509607%
+
+ARC: mem_trace/541.leela_r_llc.mem_trace
+Cache_Size: 1024 | Assoc: 4
+Hit rate: 98.221087%
+
+ARC: mem_trace/548.exchange2_r_llc.mem_trace
+Cache_Size: 1024 | Assoc: 4
+Hit rate: 99.985094%
+
+ARC: mem_trace/531.deepsjeng_r_llc.mem_trace
+Cache_Size: 2048 | Assoc: 4
+Hit rate: 95.904699%
+
+ARC: mem_trace/541.leela_r_llc.mem_trace
+Cache_Size: 2048 | Assoc: 4
+Hit rate: 99.449717%
+
+ARC: mem_trace/548.exchange2_r_llc.mem_trace
+Cache_Size: 2048 | Assoc: 4
+Hit rate: 99.985094%
+
+ARC: mem_trace/531.deepsjeng_r_llc.mem_trace
+Cache_Size: 128 | Assoc: 8
+Hit rate: 79.452720%
+
+ARC: mem_trace/541.leela_r_llc.mem_trace
+Cache_Size: 128 | Assoc: 8
+Hit rate: 43.091389%
+
+ARC: mem_trace/548.exchange2_r_llc.mem_trace
+Cache_Size: 128 | Assoc: 8
+Hit rate: 99.958378%
+
+ARC: mem_trace/531.deepsjeng_r_llc.mem_trace
+Cache_Size: 256 | Assoc: 8
+Hit rate: 90.796450%
+
+ARC: mem_trace/541.leela_r_llc.mem_trace
+Cache_Size: 256 | Assoc: 8
+Hit rate: 76.416546%
+
+ARC: mem_trace/548.exchange2_r_llc.mem_trace
+Cache_Size: 256 | Assoc: 8
+Hit rate: 99.985094%
+
+ARC: mem_trace/531.deepsjeng_r_llc.mem_trace
+Cache_Size: 512 | Assoc: 8
+Hit rate: 94.859013%
+
+ARC: mem_trace/541.leela_r_llc.mem_trace
+Cache_Size: 512 | Assoc: 8
+Hit rate: 94.535446%
+
+ARC: mem_trace/548.exchange2_r_llc.mem_trace
+Cache_Size: 512 | Assoc: 8
+Hit rate: 99.985094%
+
+ARC: mem_trace/531.deepsjeng_r_llc.mem_trace
+Cache_Size: 1024 | Assoc: 8
+Hit rate: 95.682276%
+
+ARC: mem_trace/541.leela_r_llc.mem_trace
+Cache_Size: 1024 | Assoc: 8
+Hit rate: 98.865547%
+
+ARC: mem_trace/548.exchange2_r_llc.mem_trace
+Cache_Size: 1024 | Assoc: 8
+Hit rate: 99.985094%
+
+ARC: mem_trace/531.deepsjeng_r_llc.mem_trace
+Cache_Size: 2048 | Assoc: 8
+Hit rate: 95.945456%
+
+ARC: mem_trace/541.leela_r_llc.mem_trace
+Cache_Size: 2048 | Assoc: 8
+Hit rate: 99.596052%
+
+ARC: mem_trace/548.exchange2_r_llc.mem_trace
+Cache_Size: 2048 | Assoc: 8
+Hit rate: 99.985094%
+
+ARC: mem_trace/531.deepsjeng_r_llc.mem_trace
+Cache_Size: 128 | Assoc: 16
+Hit rate: 81.238161%
+
+ARC: mem_trace/541.leela_r_llc.mem_trace
+Cache_Size: 128 | Assoc: 16
+Hit rate: 44.497692%
+
+ARC: mem_trace/548.exchange2_r_llc.mem_trace
+Cache_Size: 128 | Assoc: 16
+Hit rate: 99.985094%
+
+ARC: mem_trace/531.deepsjeng_r_llc.mem_trace
+Cache_Size: 256 | Assoc: 16
+Hit rate: 91.503918%
+
+ARC: mem_trace/541.leela_r_llc.mem_trace
+Cache_Size: 256 | Assoc: 16
+Hit rate: 79.642627%
+
+ARC: mem_trace/548.exchange2_r_llc.mem_trace
+Cache_Size: 256 | Assoc: 16
+Hit rate: 99.985094%
+
+ARC: mem_trace/531.deepsjeng_r_llc.mem_trace
+Cache_Size: 512 | Assoc: 16
+Hit rate: 95.036627%
+
+ARC: mem_trace/541.leela_r_llc.mem_trace
+Cache_Size: 512 | Assoc: 16
+Hit rate: 96.031244%
+
+ARC: mem_trace/548.exchange2_r_llc.mem_trace
+Cache_Size: 512 | Assoc: 16
+Hit rate: 99.985094%
+
+ARC: mem_trace/531.deepsjeng_r_llc.mem_trace
+Cache_Size: 1024 | Assoc: 16
+Hit rate: 95.751593%
+
+ARC: mem_trace/541.leela_r_llc.mem_trace
+Cache_Size: 1024 | Assoc: 16
+Hit rate: 99.009731%
+
+ARC: mem_trace/548.exchange2_r_llc.mem_trace
+Cache_Size: 1024 | Assoc: 16
+Hit rate: 99.985094%
+
+ARC: mem_trace/531.deepsjeng_r_llc.mem_trace
+Cache_Size: 2048 | Assoc: 16
+Hit rate: 95.958126%
+
+ARC: mem_trace/541.leela_r_llc.mem_trace
+Cache_Size: 2048 | Assoc: 16
+Hit rate: 99.626888%
+
+ARC: mem_trace/548.exchange2_r_llc.mem_trace
+Cache_Size: 2048 | Assoc: 16
+Hit rate: 99.985094%
