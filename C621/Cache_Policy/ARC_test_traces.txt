@@ -1,17 +1,5 @@
 ARC: mem_trace/531.deepsjeng_r_llc.mem_trace
 Cache_Size: 128 | Assoc: 4
-Hit rate: 77.054361%
-
-ARC: mem_trace/541.leela_r_llc.mem_trace
-Cache_Size: 128 | Assoc: 4
-Hit rate: 43.600741%
-
-ARC: mem_trace/548.exchange2_r_llc.mem_trace
-Cache_Size: 128 | Assoc: 4
-Hit rate: 99.927129%
-
-ARC: mem_trace/531.deepsjeng_r_llc.mem_trace
-Cache_Size: 128 | Assoc: 4
 Hit rate: 77.051160%
 
 ARC: mem_trace/541.leela_r_llc.mem_trace
